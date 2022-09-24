@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas game</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+        name="description"
+        content="canvas game"
+        />
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                grid-gap: 10px;
+                align-items: center;
+                justify-content: center;
+                background-color: #c2eec2;
+            }
+
+            #canvas{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #game_over{
+                position: absolute;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100vw;
+                height: 100vh;
+                background-color: #99999999;
+            }
+            #game_over .game_text{
+                font-size: 30px;
+            }
+            #game_over .game_button{
+                padding: 2px;
+                font-size: 17px;
+                border: none;
+                border-radius: 5px;
+                height: 30px;
+                outline: none;
+                background-color: #c2eec2;
+            }
+            .shown{
+                display: flex;
+            }
+            .hidden{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <div id="game_over" class="hidden">
+            <p class="game_text">Game over!!</p>
+            <button class="game_button">Try again</button>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
