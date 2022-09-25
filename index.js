@@ -420,7 +420,7 @@ const play = ()=>{
     if(enemyObjects.length <= 1){
         for(let enemy_i=0;enemy_i<numberOfEnemies;enemy_i++){
             enemyObjects.push(
-                new Enemy({x:canvas.width,y:Math.floor(Math.random(canvas.height)*canvas.height)},enemyImage)
+                new Enemy({x:canvas.width+(Math.floor(Math.random(100)*100)),y:Math.floor(Math.random(canvas.height)*canvas.height)},enemyImage)
             );
         }
         //numberOfEnemies++;
@@ -436,6 +436,7 @@ const play = ()=>{
 
         if(enemyObject.position.x+enemyObject.width <= 0){
             //remove the enemy outside game area
+            
             enemyObjects.splice(enemyObjectIndex,1);
         }
     });
